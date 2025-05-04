@@ -102,3 +102,38 @@
 //         d.s(); // Dog barks
 //      } // Puppy barks  }
 // }
+
+
+
+
+class Animal {
+    public void sound() {
+        System.out.println("Some generic animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Bark");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Meow");
+    }
+}
+
+public class MethodOverridingExample {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+
+        myAnimal.sound(); // Outputs: Some generic animal sound
+        myDog.sound();   // Outputs: Bark
+        myCat.sound();   // Outputs: Meow
+    }
+}
